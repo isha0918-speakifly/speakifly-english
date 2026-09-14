@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — Speakifly</title>
+<meta name="description" content="Log in to your Speakifly spoken English course.">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<script>
+  // If already logged in, skip straight to the course.
+  (function(){
+    try {
+      var s = JSON.parse(localStorage.getItem("speakifly_session"));
+      if (s && s.u) {
+        var params = new URLSearchParams(location.search);
+        location.replace(params.get("next") || "index.html");
+      }
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body class="page-login">
+<main class="login-main">
+  <div class="login-card">
+    <img src="logo.png" alt="Speakifly logo" class="login-logo">
+    <h1>Welcome back</h1>
+    <p class="login-sub">Log in with the username and password your teacher gave you.</p>
+
+    <form id="loginForm" novalidate>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" autocomplete="username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" autocomplete="current-password" required>
+
+      <button type="submit" class="btn btn-primary login-submit">Log in</button>
+      <p class="login-error" id="loginError" role="alert"></p>
+    </form>
+  </div>
+</main>
+
+<script src="users-data.js"></script>
+<script>
+  document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    var u = document.getElementById("username").value.trim();
+    var p = document.getElementById("password").value;
+    var errEl = document.getElementById("loginError");
+    var match = (typeof USERS !== "undefined") ? USERS.find(function(acc){
+      return acc.u.toLowerCase() === u.toLowerCase() && acc.p === p;
+    }) : null;
+
+    if (!match) {
+      errEl.textContent = "That username or password isn't right. Please check with your teacher and try again.";
+      errEl.classList.add("show");
+      return;
+    }
+    errEl.classList.remove("show");
+    try {
+      localStorage.setItem("speakifly_session", JSON.stringify({ u: match.u, name: match.name || match.u }));
+    } catch (err) {}
+    var params = new URLSearchParams(location.search);
+    location.href = params.get("next") || "index.html";
+  });
+</script>
+</body>
+</html>

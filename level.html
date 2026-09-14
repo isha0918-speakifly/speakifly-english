@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speakifly — Level</title>
+<meta name="description" content="Speakifly spoken English course level: vocabulary, pronunciation, speaking practice and a quiz.">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<script>
+(function(){
+  try {
+    var s = JSON.parse(localStorage.getItem("speakifly_session"));
+    if (!s || !s.u) {
+      location.replace("login.html?next=" + encodeURIComponent(location.pathname + location.search));
+    }
+  } catch (e) { location.replace("login.html"); }
+})();
+</script>
+</head>
+<body class="page-level">
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand"><img src="logo.png" alt="Speakifly logo"></a>
+    <div class="topbar-progress">
+      <span class="user-chip">Hi, <span data-user-name>there</span></span>
+      <span class="progress-pill">
+        <span class="bar"><span data-progress-bar style="width:0%"></span></span>
+        <span data-progress-count>0 / 60</span>
+      </span>
+      <a href="#" class="btn btn-ghost btn-sm" data-logout-btn>Log out</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <div class="level-header">
+      <p class="crumbs"><a href="index.html">&larr; All 60 levels</a></p>
+      <span class="stage-badge" id="stageBadge">Stage</span>
+      <h1 id="levelTitle">Level</h1>
+      <p class="focus" id="levelFocus"></p>
+      <p class="level-intro" id="levelIntro"></p>
+    </div>
+
+    <div id="levelContent"></div>
+
+    <section class="quiz-section" aria-labelledby="quizHeading">
+      <h2 id="quizHeading">✍️ Writing Practice</h2>
+      <p class="sub">Answer every question to mark this level complete. You can retry as many times as you like.</p>
+      <div id="quizQuestions"></div>
+      <div class="quiz-result" id="quizResult">
+        <div class="score">0 / 0</div>
+        <p>Keep going!</p>
+      </div>
+    </section>
+
+    <nav class="level-nav" aria-label="Level navigation">
+      <a id="prevLevelBtn" class="btn btn-ghost" href="index.html">&larr; Previous level</a>
+      <a id="nextLevelBtn" class="btn btn-primary" href="index.html">Next level &rarr;</a>
+    </nav>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <a href="index.html" class="brand"><img src="logo.png" alt="Speakifly logo"></a>
+    <span>Speak with confidence. Practice out loud, every level, every day.</span>
+  </div>
+</footer>
+
+<script src="levels-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

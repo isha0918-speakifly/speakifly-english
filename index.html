@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speakifly — Learn to Speak English Fluently, 60 Levels</title>
+<meta name="description" content="A free, 60-level spoken English course. Start from zero words and finish speaking fluently, with pronunciation practice, speaking prompts and quizzes at every level.">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="stylesheet" href="style.css">
+<script>
+(function(){
+  try {
+    var s = JSON.parse(localStorage.getItem("speakifly_session"));
+    if (!s || !s.u) {
+      location.replace("login.html?next=" + encodeURIComponent(location.pathname + location.search));
+    }
+  } catch (e) { location.replace("login.html"); }
+})();
+</script>
+</head>
+<body class="page-index">
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand"><img src="logo.png" alt="Speakifly logo"></a>
+    <div class="topbar-progress">
+      <span class="user-chip">Hi, <span data-user-name>there</span></span>
+      <span class="progress-pill">
+        <span class="bar"><span data-progress-bar style="width:0%"></span></span>
+        <span data-progress-count>0 / 60</span>
+      </span>
+      <a href="#" class="btn btn-ghost btn-sm" data-logout-btn>Log out</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">A 60-level spoken English course</p>
+        <h1>Start with zero words. Finish speaking with confidence.</h1>
+        <p class="lede">Speakifly takes you from your very first English word to fluent, natural conversation — one flight level at a time. Every level builds pronunciation, vocabulary, grammar and real speaking practice, with instant feedback along the way.</p>
+        <div class="hero-ctas">
+          <a href="level.html?id=1" class="btn btn-primary">Start Level 1 — it's free</a>
+          <a href="#flightpath" class="btn btn-ghost">See all 60 levels</a>
+        </div>
+      </div>
+      <div class="instrument">
+        <h3>Your flight path</h3>
+        <p class="sub">Six stages, sixty levels, one destination: fluent English.</p>
+        <div class="altimeter">
+          <div class="alt-tick" data-alt-stage="5"><span class="dot"></span><span class="lbl">Fluency & Confidence</span></div>
+          <div class="alt-tick" data-alt-stage="4"><span class="dot"></span><span class="lbl">Advanced Words & Idioms</span></div>
+          <div class="alt-tick" data-alt-stage="3"><span class="dot"></span><span class="lbl">Working Vocabulary</span></div>
+          <div class="alt-tick" data-alt-stage="2"><span class="dot"></span><span class="lbl">Grammar Foundations</span></div>
+          <div class="alt-tick" data-alt-stage="1"><span class="dot"></span><span class="lbl">Everyday Sentences</span></div>
+          <div class="alt-tick" data-alt-stage="0"><span class="dot"></span><span class="lbl">Foundation Words</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How Speakifly works</p>
+        <h2>Every level, the same reliable pattern</h2>
+        <p>No matter your starting point, each level follows a structure designed to build real spoken fluency, not just test knowledge.</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-card">
+          <div class="num">1</div>
+          <h3>Learn out loud</h3>
+          <p>New words, sentences or grammar, each with a phonetic guide and a "Hear it" button so you always know how it should sound.</p>
+        </div>
+        <div class="how-card">
+          <div class="num">2</div>
+          <h3>Speak it back</h3>
+          <p>Every level ends with a speaking prompt. Use the built-in microphone practice to check your pronunciation against the target phrase.</p>
+        </div>
+        <div class="how-card">
+          <div class="num">3</div>
+          <h3>Prove it in writing</h3>
+          <p>Short fill-in-the-blank and multiple-choice questions lock in what you've learned before you move to the next level.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="flightpath" class="flightpath-section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The full course</p>
+        <h2>60 levels across 6 stages</h2>
+        <p>Difficulty increases with every level — from your first word, to full sentences, to grammar, to advanced vocabulary, to confident, free-flowing speech.</p>
+      </div>
+      <div class="flightpath">
+        
+        <div class="stage">
+          <div class="stage-head">
+            <div>
+              <span class="tag">Stage 1 · Foundation Words</span>
+              <h3>Foundation Words</h3>
+              <p class="desc">Zero assumed knowledge. Learn the core words of English, one small runway of vocabulary at a time.</p>
+            </div>
+            <span class="stage-progress" data-stage-total="10" data-stage-ids="1,2,3,4,5,6,7,8,9,10">0 / 10 complete</span>
+          </div>
+          <div class="level-row">
+            <a class="level-node" data-level-id="1" href="level.html?id=1"><span class="lv-num">01</span><span class="lv-title">People & Greetings</span></a>
+            <a class="level-node" data-level-id="2" href="level.html?id=2"><span class="lv-num">02</span><span class="lv-title">Family Words</span></a>
+            <a class="level-node" data-level-id="3" href="level.html?id=3"><span class="lv-num">03</span><span class="lv-title">Numbers & Time</span></a>
+            <a class="level-node" data-level-id="4" href="level.html?id=4"><span class="lv-num">04</span><span class="lv-title">Colors & Shapes</span></a>
+            <a class="level-node" data-level-id="5" href="level.html?id=5"><span class="lv-num">05</span><span class="lv-title">Body Parts</span></a>
+            <a class="level-node" data-level-id="6" href="level.html?id=6"><span class="lv-num">06</span><span class="lv-title">Food & Drink</span></a>
+            <a class="level-node" data-level-id="7" href="level.html?id=7"><span class="lv-num">07</span><span class="lv-title">Home & Objects</span></a>
+            <a class="level-node" data-level-id="8" href="level.html?id=8"><span class="lv-num">08</span><span class="lv-title">Clothes & Weather</span></a>
+            <a class="level-node" data-level-id="9" href="level.html?id=9"><span class="lv-num">09</span><span class="lv-title">Animals & Nature</span></a>
+            <a class="level-node" data-level-id="10" href="level.html?id=10"><span class="lv-num">10</span><span class="lv-title">Everyday Verbs</span></a>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-head">
+            <div>
+              <span class="tag">Stage 2 · Everyday Sentences</span>
+              <h3>Everyday Sentences</h3>
+              <p class="desc">Turn single words into full, natural sentences you can use in real conversations today.</p>
+            </div>
+            <span class="stage-progress" data-stage-total="10" data-stage-ids="11,12,13,14,15,16,17,18,19,20">0 / 10 complete</span>
+          </div>
+          <div class="level-row">
+            <a class="level-node" data-level-id="11" href="level.html?id=11"><span class="lv-num">11</span><span class="lv-title">Introducing Yourself</span></a>
+            <a class="level-node" data-level-id="12" href="level.html?id=12"><span class="lv-num">12</span><span class="lv-title">Small Talk & Greetings</span></a>
+            <a class="level-node" data-level-id="13" href="level.html?id=13"><span class="lv-num">13</span><span class="lv-title">At the Shop</span></a>
+            <a class="level-node" data-level-id="14" href="level.html?id=14"><span class="lv-num">14</span><span class="lv-title">Asking for Directions</span></a>
+            <a class="level-node" data-level-id="15" href="level.html?id=15"><span class="lv-num">15</span><span class="lv-title">At a Restaurant</span></a>
+            <a class="level-node" data-level-id="16" href="level.html?id=16"><span class="lv-num">16</span><span class="lv-title">On the Phone</span></a>
+            <a class="level-node" data-level-id="17" href="level.html?id=17"><span class="lv-num">17</span><span class="lv-title">Making Plans</span></a>
+            <a class="level-node" data-level-id="18" href="level.html?id=18"><span class="lv-num">18</span><span class="lv-title">Weather & Feelings</span></a>
+            <a class="level-node" data-level-id="19" href="level.html?id=19"><span class="lv-num">19</span><span class="lv-title">At the Doctor</span></a>
+            <a class="level-node" data-level-id="20" href="level.html?id=20"><span class="lv-num">20</span><span class="lv-title">Travel & Airport Talk</span></a>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-head">
+            <div>
+              <span class="tag">Stage 3 · Grammar Foundations</span>
+              <h3>Grammar Foundations</h3>
+              <p class="desc">The ten grammar patterns that hold every fluent sentence together — explained simply, practised out loud.</p>
+            </div>
+            <span class="stage-progress" data-stage-total="10" data-stage-ids="21,22,23,24,25,26,27,28,29,30">0 / 10 complete</span>
+          </div>
+          <div class="level-row">
+            <a class="level-node" data-level-id="21" href="level.html?id=21"><span class="lv-num">21</span><span class="lv-title">Present Simple</span></a>
+            <a class="level-node" data-level-id="22" href="level.html?id=22"><span class="lv-num">22</span><span class="lv-title">Present Continuous</span></a>
+            <a class="level-node" data-level-id="23" href="level.html?id=23"><span class="lv-num">23</span><span class="lv-title">Past Simple</span></a>
+            <a class="level-node" data-level-id="24" href="level.html?id=24"><span class="lv-num">24</span><span class="lv-title">Past Continuous</span></a>
+            <a class="level-node" data-level-id="25" href="level.html?id=25"><span class="lv-num">25</span><span class="lv-title">Future Forms</span></a>
+            <a class="level-node" data-level-id="26" href="level.html?id=26"><span class="lv-num">26</span><span class="lv-title">Present Perfect</span></a>
+            <a class="level-node" data-level-id="27" href="level.html?id=27"><span class="lv-num">27</span><span class="lv-title">Modal Verbs</span></a>
+            <a class="level-node" data-level-id="28" href="level.html?id=28"><span class="lv-num">28</span><span class="lv-title">Comparatives & Superlatives</span></a>
+            <a class="level-node" data-level-id="29" href="level.html?id=29"><span class="lv-num">29</span><span class="lv-title">Question Formation</span></a>
+            <a class="level-node" data-level-id="30" href="level.html?id=30"><span class="lv-num">30</span><span class="lv-title">Conditionals (If Clauses)</span></a>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-head">
+            <div>
+              <span class="tag">Stage 4 · Working Vocabulary</span>
+              <h3>Working Vocabulary</h3>
+              <p class="desc">Phrasal verbs, prepositions, connectors and workplace vocabulary that make you sound natural.</p>
+            </div>
+            <span class="stage-progress" data-stage-total="10" data-stage-ids="31,32,33,34,35,36,37,38,39,40">0 / 10 complete</span>
+          </div>
+          <div class="level-row">
+            <a class="level-node" data-level-id="31" href="level.html?id=31"><span class="lv-num">31</span><span class="lv-title">Work & Office Vocabulary</span></a>
+            <a class="level-node" data-level-id="32" href="level.html?id=32"><span class="lv-num">32</span><span class="lv-title">Phrasal Verbs I</span></a>
+            <a class="level-node" data-level-id="33" href="level.html?id=33"><span class="lv-num">33</span><span class="lv-title">Prepositions of Place & Time</span></a>
+            <a class="level-node" data-level-id="34" href="level.html?id=34"><span class="lv-num">34</span><span class="lv-title">Connecting Words</span></a>
+            <a class="level-node" data-level-id="35" href="level.html?id=35"><span class="lv-num">35</span><span class="lv-title">Emotions Vocabulary</span></a>
+            <a class="level-node" data-level-id="36" href="level.html?id=36"><span class="lv-num">36</span><span class="lv-title">Money & Shopping Vocabulary</span></a>
+            <a class="level-node" data-level-id="37" href="level.html?id=37"><span class="lv-num">37</span><span class="lv-title">Technology Vocabulary</span></a>
+            <a class="level-node" data-level-id="38" href="level.html?id=38"><span class="lv-num">38</span><span class="lv-title">Health & Body (Intermediate)</span></a>
+            <a class="level-node" data-level-id="39" href="level.html?id=39"><span class="lv-num">39</span><span class="lv-title">Synonyms Practice</span></a>
+            <a class="level-node" data-level-id="40" href="level.html?id=40"><span class="lv-num">40</span><span class="lv-title">Antonyms Practice</span></a>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-head">
+            <div>
+              <span class="tag">Stage 5 · Advanced Words & Idioms</span>
+              <h3>Advanced Words & Idioms</h3>
+              <p class="desc">Academic vocabulary, idioms and proverbs that native speakers use every day.</p>
+            </div>
+            <span class="stage-progress" data-stage-total="10" data-stage-ids="41,42,43,44,45,46,47,48,49,50">0 / 10 complete</span>
+          </div>
+          <div class="level-row">
+            <a class="level-node" data-level-id="41" href="level.html?id=41"><span class="lv-num">41</span><span class="lv-title">Academic Words I</span></a>
+            <a class="level-node" data-level-id="42" href="level.html?id=42"><span class="lv-num">42</span><span class="lv-title">Academic Words II</span></a>
+            <a class="level-node" data-level-id="43" href="level.html?id=43"><span class="lv-num">43</span><span class="lv-title">Everyday Idioms I</span></a>
+            <a class="level-node" data-level-id="44" href="level.html?id=44"><span class="lv-num">44</span><span class="lv-title">Everyday Idioms II</span></a>
+            <a class="level-node" data-level-id="45" href="level.html?id=45"><span class="lv-num">45</span><span class="lv-title">Business English</span></a>
+            <a class="level-node" data-level-id="46" href="level.html?id=46"><span class="lv-num">46</span><span class="lv-title">Formal vs Informal English</span></a>
+            <a class="level-node" data-level-id="47" href="level.html?id=47"><span class="lv-num">47</span><span class="lv-title">Advanced Connectors</span></a>
+            <a class="level-node" data-level-id="48" href="level.html?id=48"><span class="lv-num">48</span><span class="lv-title">Descriptive Adjectives</span></a>
+            <a class="level-node" data-level-id="49" href="level.html?id=49"><span class="lv-num">49</span><span class="lv-title">Commonly Confused Words</span></a>
+            <a class="level-node" data-level-id="50" href="level.html?id=50"><span class="lv-num">50</span><span class="lv-title">Proverbs & Wisdom Sayings</span></a>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-head">
+            <div>
+              <span class="tag">Stage 6 · Fluency & Confidence</span>
+              <h3>Fluency & Confidence</h3>
+              <p class="desc">Longer, freer speaking: storytelling, debate, interviews and presentations. This is where fluency clicks.</p>
+            </div>
+            <span class="stage-progress" data-stage-total="10" data-stage-ids="51,52,53,54,55,56,57,58,59,60">0 / 10 complete</span>
+          </div>
+          <div class="level-row">
+            <a class="level-node" data-level-id="51" href="level.html?id=51"><span class="lv-num">51</span><span class="lv-title">Telling a Story</span></a>
+            <a class="level-node" data-level-id="52" href="level.html?id=52"><span class="lv-num">52</span><span class="lv-title">Expressing Opinions</span></a>
+            <a class="level-node" data-level-id="53" href="level.html?id=53"><span class="lv-num">53</span><span class="lv-title">Agreeing & Disagreeing</span></a>
+            <a class="level-node" data-level-id="54" href="level.html?id=54"><span class="lv-num">54</span><span class="lv-title">Debate Practice I</span></a>
+            <a class="level-node" data-level-id="55" href="level.html?id=55"><span class="lv-num">55</span><span class="lv-title">Debate Practice II</span></a>
+            <a class="level-node" data-level-id="56" href="level.html?id=56"><span class="lv-num">56</span><span class="lv-title">Job Interview Practice</span></a>
+            <a class="level-node" data-level-id="57" href="level.html?id=57"><span class="lv-num">57</span><span class="lv-title">Describing Experiences</span></a>
+            <a class="level-node" data-level-id="58" href="level.html?id=58"><span class="lv-num">58</span><span class="lv-title">Discussing News & Current Events</span></a>
+            <a class="level-node" data-level-id="59" href="level.html?id=59"><span class="lv-num">59</span><span class="lv-title">Presentation Skills</span></a>
+            <a class="level-node" data-level-id="60" href="level.html?id=60"><span class="lv-num">60</span><span class="lv-title">Capstone: Free Speaking</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <a href="index.html" class="brand"><img src="logo.png" alt="Speakifly logo"></a>
+    <span>Speak with confidence. Practice out loud, every level, every day.</span>
+  </div>
+</footer>
+
+<script src="levels-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
